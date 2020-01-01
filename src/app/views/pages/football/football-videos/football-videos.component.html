@@ -1,0 +1,15 @@
+<button
+  mat-raised-button
+  (click)="onRefresh()"
+  style="margin-right:10px;"
+>
+  ReLoad</button
+>
+<app-football-video-list
+
+  [videoList]="footballs$ | async"
+  [error]="error$ | async"
+  [isLoading]="isLoading$ | async"
+
+></app-football-video-list>
+

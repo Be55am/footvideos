@@ -1,0 +1,18 @@
+<div *ngIf="isLoading">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<div *ngIf="!isLoading">
+  <div class="jokes-list" *ngIf="videoList">
+    <app-football-video-card
+      *ngFor="let video of videoList"
+      [footballVideo]="video"
+    ></app-football-video-card>
+  </div>
+
+  <div *ngIf="!videoList">No videos found</div>
+</div>
+
+<div class="error" *ngIf="error !== ''">
+  OOps {{error}}
+</div>
