@@ -16,7 +16,6 @@ export class FootballVideosComponent implements OnInit {
   error$: Observable<string>;
   isLoading$: Observable<boolean>;
   loading: boolean;
-
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
@@ -27,10 +26,6 @@ export class FootballVideosComponent implements OnInit {
     this.isLoading$.subscribe((result) => {
       this.loading = result;
     });
-
-
-
-
   }
 
 
