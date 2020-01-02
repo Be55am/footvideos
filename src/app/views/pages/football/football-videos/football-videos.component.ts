@@ -15,6 +15,7 @@ export class FootballVideosComponent implements OnInit {
   footballs$: Observable<Football[]>;
   error$: Observable<string>;
   isLoading$: Observable<boolean>;
+  loading: boolean;
 
   constructor(private store: Store<State>) { }
 
@@ -23,6 +24,9 @@ export class FootballVideosComponent implements OnInit {
     this.error$ = this.store.pipe(select(FootballSelectors.selectFootballError));
     this.isLoading$ = this.store.pipe(select(FootballSelectors.selectFootballIsLoading));
     this.store.dispatch(FootballActions.appComponentInitialized());
+    this.isLoading$.subscribe((result) => {
+      this.loading = result;
+    });
 
 
 
