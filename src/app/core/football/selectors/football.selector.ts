@@ -10,7 +10,7 @@ const getFootballState = createFeatureSelector<State>(
 
 export const selectFootballList = createSelector(getFootballState, (state: State) => state.footballs);
 export const selectFootballIsLoading = createSelector(getFootballState, (state: State) => state.isLoading || false);
-export const selectFootballError = createSelector(getFootballState, (state: State) => state.error || '');
+export const selectFootballError = createSelector(getFootballState, (state: State) => state.error.message || null);
 
 
 

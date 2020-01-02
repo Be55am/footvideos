@@ -3,11 +3,11 @@ import {Football} from './football';
 export interface State {
   footballs: Football[];
   isLoading: boolean;
-  error: string;
+  error: any;
 }
 
 export const initialState: State = {
   footballs: null,
   isLoading: false,
-  error: '',
+  error: null,
 };

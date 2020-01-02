@@ -3,7 +3,7 @@ import {Football} from '../models';
 
 export const loadAllSucceeded = createAction('[Football Api] Load All succeeded', props<{footballs: Football[]}>());
 
-export const loadAllFailed = createAction('[Football Api] Load All succeeded', props<{error: string}>());
+export const loadAllFailed = createAction('[Football Api] Load All succeeded', props<{error: any}>());
 
 export const appComponentInitialized = createAction('[App Component] Initialized');
 

@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class FootballService {
-  private API_BASE_URL = 'https://free-football-soccer-videos1.p.rapidapi.com/v1/';
+  private API_BASE_URL = ';https://free-football-soccer-videos1.p.rapidapi.com/v1/';
 
   constructor(private http: HttpClient) {
     console.log('Service is running ...');
