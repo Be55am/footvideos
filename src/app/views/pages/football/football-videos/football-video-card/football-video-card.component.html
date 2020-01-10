@@ -1,8 +1,10 @@
+<!--<mat-card>-->
+<!--  <mat-card-title> {{ footballVideo.title }}</mat-card-title>-->
+<!--  <mat-card-content>-->
+<!--    <div [innerHTML]="footballVideo.embed| sanitizeHtml"></div>-->
+<!--  </mat-card-content>-->
+<!--</mat-card>-->
+
 <mat-card>
-  <mat-card-title> {{ footballVideo.title }}</mat-card-title>
-  <mat-card-content>
-    <div [innerHTML]="footballVideo.embed| sanitizeHtml"></div>
-  </mat-card-content>
+    <iframe height="450" width="560" [src]="page" frameborder="0" allowfullscreen></iframe>
 </mat-card>
-
-

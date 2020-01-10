@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Football} from '../../../../../core/football/models';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-football-video-card',
@@ -9,10 +10,17 @@ import {Football} from '../../../../../core/football/models';
 export class FootballVideoCardComponent implements OnInit {
 
   @Input() footballVideo: Football;
+  page: any;
+  url: string;
 
-  constructor() { }
+  constructor(public sanitizer: DomSanitizer) {
+  }
 
   ngOnInit() {
+    const text = this.footballVideo.embed;
+    const list  = text.split('\'', 2);
+    this.url = list[1];
+    this.page = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
   }
 
 }

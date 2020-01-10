@@ -1,10 +1,9 @@
-<button *ngIf="!loading"
-  mat-raised-button
-  (click)="onRefresh()"
-  style="margin-right:10px;"
->
-  ReLoad</button
->
+<button  *ngIf="!loading" class="wrapper"
+         style="   margin-bottom: 15px;"
+
+  (click)="onRefresh()" mat-fab aria-label="Example icon-button with a heart icon">
+  <mat-icon>replay</mat-icon>
+</button>
 <app-football-video-list
 
   [videoList]="footballs$ | async"

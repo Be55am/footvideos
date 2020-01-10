@@ -15,8 +15,7 @@ export class FootballStoreEffects {
   loadAllRequested$ = createEffect(() =>
     this.actions$.pipe(
     ofType(FootballActions.loadAllRequested, FootballActions.appComponentInitialized),
-      switchMap(() =>
-    this.footballService.getFootballVideos()
+      switchMap(() => this.footballService.getFootballVideos()
       .pipe(
       map(footballs => FootballActions.loadAllSucceeded({footballs})),
       catchError(error => of(FootballActions.loadAllFailed({error})))
