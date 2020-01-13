@@ -1,8 +1,22 @@
-.wrapper {
-  text-align: center;
+.center{
+  position:fixed;
+  bottom:15%;
+  left:85%;
+  z-index: 99;
+
+  /*width:60%;*/
+
 }
 
-.button {
-  position: absolute;
-  top: 50%;
+.center .btn{
+  /*background:red;*/
+  /*width:100%;*/
+  /*color:white;*/
+  /*font-weight:bold;*/
+  /*border-radius: 64px;*/
+  /*padding:40px;*/
+}
+
+.list{
+  z-index: 1;
 }

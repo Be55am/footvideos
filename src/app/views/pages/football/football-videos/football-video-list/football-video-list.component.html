@@ -2,12 +2,15 @@
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
 
-<div *ngIf="!isLoading">
-  <div class="jokes-list" *ngIf="videoList">
-    <app-football-video-card
-      *ngFor="let video of videoList"
-      [footballVideo]="video"
-    ></app-football-video-card>
+
+<div  *ngIf="!isLoading" >
+  <div *ngIf="videoList" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around"  >
+    <div *ngFor="let video of videoList">
+      <app-football-video-card
+                               [footballVideo]="video"
+      ></app-football-video-card>
+    </div>
+
   </div>
 
   <div *ngIf="!videoList">No videos found</div>
