@@ -18,8 +18,8 @@ export class FootballVideoCardComponent implements OnInit {
 
   ngOnInit() {
     const text = this.footballVideo.embed;
-    const list  = text.split('\'', 2);
-    this.url = list[1];
+    const list  = text.split('\'', 6);
+    this.url = list[5];
     this.page = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
   }
 
