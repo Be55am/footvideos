@@ -12,12 +12,14 @@ import * as fromFootballVideo from './core/football/reducers/football.reducers';
 import {EffectsModule} from '@ngrx/effects';
 import {FootballStoreEffects} from './core/football/effects/football.effects';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatProgressBarModule,

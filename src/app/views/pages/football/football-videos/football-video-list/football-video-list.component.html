@@ -4,9 +4,9 @@
 
 
 <div  *ngIf="!isLoading" >
-  <div *ngIf="videoList" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around"  >
-    <div *ngFor="let video of videoList">
-      <app-football-video-card
+  <div *ngIf="videoList" fxLayout="row wrap"  fxLayoutAlign="space-around"  >
+    <div *ngFor="let video of videoList" fxFlex.lt-sm="100%" fxFlex.lt-md="50%" fxFlex.md="33%" fxFlex.lt-lg="25%" fxFlex="25%">
+      <app-football-video-card fxFlex="100%"
                                [footballVideo]="video"
       ></app-football-video-card>
     </div>
