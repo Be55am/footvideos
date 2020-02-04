@@ -1,5 +1,5 @@
 # Demo 
-you can try the app on [here](https://be55am.github.io/ngrx-example-football-videos/) version 1.O
+you can try the app on [here](https://be55am.github.io/footvideos/) version 1.O
 # NgrxExample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
